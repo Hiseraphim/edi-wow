@@ -98,5 +98,5 @@ body {
 .card p { padding: 0 15px 15px; font-size: 14px; color: #2F80ED; }
 
 /* FOOTERS */
-.sub-footer { background: #2F80ED; color: #2F80ED; padding: 25px 0; text-align: center; }
-.main-footer { background: #2F80ED; color: #2F80ED; padding: 40px 0; text-align: center; font-size: 14px; }
+.sub-footer { background: #2F80ED; color: #FFFFFF; padding: 25px 0; text-align: center; }
+.main-footer { background: #2F80ED; color: #FFFFFF; padding: 40px 0; text-align: center; font-size: 14px; }
