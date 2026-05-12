@@ -58,6 +58,25 @@ nav h2 {
     transition: background 0.3s;
 }
 
+.cta-button {
+    background: linear-gradient(135deg, #1877f2, #166fe5);
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(24, 119, 242, 0.3);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.4);
+}
+
 .nav-btn:hover {
     background: #f0f0f0;
 }
