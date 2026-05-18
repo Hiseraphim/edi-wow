@@ -127,21 +127,52 @@
         <p id="modalPrice"></p>
        <p id="modalDesc"></p>
 
-<!-- BOOKING FORM -->
-<form id="bookingForm">
-    <input type="text" id="customerName" placeholder="Your Name" required>
+<!-- BOOKING MODAL -->
+<div id="bookingModal" class="modal" onclick="closeBookingModal(event)">
 
-    <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+    <div class="modal-content" onclick="event.stopPropagation()">
 
-    <input type="date" id="bookingDate" required>
+        <span class="close" onclick="closeBookingModal()">&times;</span>
 
-    <input type="time" id="bookingTime" required>
+        <h2>Book Laundry Service</h2>
 
-    <textarea id="bookingNotes" placeholder="Additional Notes"></textarea>
+        <form id="bookingForm">
 
-    <button type="submit" class="contact-btn">Book Now</button>
-</form>
+            <input type="text" id="customerName" placeholder="Full Name" required>
+
+            <input type="tel" id="customerPhone" placeholder="Contact Number" required>
+
+            <input type="text" id="customerCountry" placeholder="Country" required>
+
+            <input type="text" id="customerRegion" placeholder="Region / Province" required>
+
+            <textarea id="customerAddress" placeholder="Full Address" required></textarea>
+
+            <select id="customerService" required>
+                <option value="">Select Service</option>
+                <option>Full-Service Laundry</option>
+                <option>Self-Service</option>
+                <option>Pickup & Delivery</option>
+                <option>Shoe Cleaning</option>
+                <option>Dry Cleaning</option>
+                <option>Iron Press</option>
+                <option>Steam Press</option>
+                <option>Carpet Cleaning</option>
+                <option>Upholstery Cleaning</option>
+            </select>
+
+            <input type="date" id="bookingDate" required>
+
+            <input type="time" id="bookingTime" required>
+
+            <button type="submit" class="contact-btn">
+                Confirm Booking
+            </button>
+
+        </form>
+
     </div>
+
 </div>
 
 <!-- FOOTER -->
