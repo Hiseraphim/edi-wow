@@ -127,11 +127,22 @@
 
         <h2 id="modalTitle"></h2>
         <p id="modalPrice"></p>
-        <p id="modalDesc"></p>
+     <p id="modalDesc"></p>
 
-       <button class="contact-btn" onclick="openBookingModal()">
-    Book Now
-</button>
+<!-- BOOKING FORM -->
+<form id="bookingForm">
+    <input type="text" id="customerName" placeholder="Your Name" required>
+
+    <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+
+    <input type="date" id="bookingDate" required>
+
+    <input type="time" id="bookingTime" required>
+
+    <textarea id="bookingNotes" placeholder="Additional Notes"></textarea>
+
+    <button type="submit" class="contact-btn">Book Now</button>
+</form>
 
     </div>
 </div>
