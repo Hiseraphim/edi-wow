@@ -75,4 +75,63 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
 
     document.getElementById("bookingForm").reset();
     closeModal();
+}); 
+// OPEN MODAL
+function openBookingModal() {
+    document.getElementById("bookingModal").style.display = "flex";
+}
+
+// CLOSE MODAL
+function closeBookingModal(event) {
+    if (!event || event.target.id === "bookingModal") {
+        document.getElementById("bookingModal").style.display = "none";
+    }
+}
+
+// BOOKING SYSTEM
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("customerName").value;
+    const phone = document.getElementById("customerPhone").value;
+    const country = document.getElementById("customerCountry").value;
+    const region = document.getElementById("customerRegion").value;
+    const address = document.getElementById("customerAddress").value;
+    const service = document.getElementById("customerService").value;
+    const date = document.getElementById("bookingDate").value;
+    const time = document.getElementById("bookingTime").value;
+
+    const bookingKey = `${date}-${time}`;
+
+    let bookings = JSON.parse(localStorage.getItem("bookings")) || {};
+
+    // CHECK IF SLOT IS TAKEN
+    if (bookings[bookingKey]) {
+        alert("❌ This schedule is already booked. Choose another time.");
+        return;
+    }
+
+    // SAVE BOOKING
+    bookings[bookingKey] = {
+        name,
+        phone,
+        country,
+        region,
+        address,
+        service,
+        date,
+        time
+    };
+
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    alert(
+        "✅ Booking Confirmed!\n\n" +
+        "Service: " + service + "\n" +
+        "Date: " + date + "\n" +
+        "Time: " + time
+    );
+
+    document.getElementById("bookingForm").reset();
+    document.getElementById("bookingModal").style.display = "none";
 });
