@@ -483,3 +483,22 @@ footer {
         height: 200px;
     }
 }
+#bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+#bookingForm input,
+#bookingForm textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#bookingForm textarea {
+    resize: vertical;
+    min-height: 80px;
+}
